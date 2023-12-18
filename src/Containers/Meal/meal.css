@@ -1,0 +1,52 @@
+.Meal {
+
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+   display: flex;
+   flex-direction: column;
+   border: 2px solid blue;
+}
+
+
+
+
+.plat {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border: 2px solid black;
+}
+
+
+
+
+.bigMeal {
+
+    height: 450px;
+    width: 450px;
+
+    border: 2px solid black;
+    background-color: gray;
+    
+}
+
+
+
+
+.recette {
+
+    border: 2px solid black;
+    height: 600px;
+   width: 600px;
+}
+
+
+.ingredients {
+
+  height: 500px ;
+  border: 2px solid black;
+}
