@@ -13,7 +13,7 @@ function Area() {
       
 
       <section className="area">
-        plats de la région ici
+      www.themealdb.com/api/json/v1/1/filter.php?a=Canadian
       </section>
 
     </div>

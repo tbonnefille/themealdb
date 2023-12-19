@@ -30,7 +30,7 @@ function Footer() {
       <div>
 
         <div>powered by</div>
-        <div>icones des tecbno utilisées</div>
+        <div>icones des techno utilisées</div>
 
       </div>
 
