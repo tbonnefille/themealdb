@@ -12,17 +12,10 @@
 }
 
 
+.mealInfo {
 
-
-.plat {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-   width: 100%;
-    border: 2px solid red;
+    border: 2px solid brown;
 }
-
 
 
 
@@ -37,20 +30,35 @@
 }
 
 
+.bigImg {
+
+    object-fit: cover;
+    width: 100%;
+}
+
 
 
 .recette {
 
-    border: 2px solid black;
-    height: 600px;
-   width: 600px;
+    border: 2px solid green;
+
 }
+
+
+.mesures {
+
+    margin: 10px;
+    border: 2px solid salmon;
+}
+
+
+
 
 
 .ingredients {
 
-  height: 500px ;
-  border: 2px solid black;
-  margin: 20px;
+ 
+  border: 2px solid fuchsia;
+ 
 
 }

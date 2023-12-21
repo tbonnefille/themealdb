@@ -1,6 +1,5 @@
-.area {
+.Area {
 
-    margin: 50px;
-    border: 2px solid black;
-    height: 400px;
+    margin-left: 200px;
+    margin-right: 200px;
 }

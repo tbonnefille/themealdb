@@ -1,0 +1,26 @@
+
+.ByLetter {
+
+
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.cardHolder {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}

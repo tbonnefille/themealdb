@@ -23,13 +23,13 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/ByLetter/:letter" element={<ByLetter />} />
-          <Route path="/Meal" element={<Meal />} />
+          <Route path="/Meal/:idMeal" element={<Meal />} />
           <Route path="/Ingredient" element={<Ingredient />} />
-          <Route path="/Area" element={<Area />} />
-          <Route path="/Category" element={<Category />} />
-          <Route path="/" element={<Error404 />} />
+          <Route path="/Area/:countryId" element={<Area />} />
+          <Route path="/Category/:catId" element={<Category />} />
+          <Route path="/*" element={<Error404 />} />
         </Routes>
 
         <Footer />

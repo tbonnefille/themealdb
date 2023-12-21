@@ -6,3 +6,35 @@ Plum: #883677;
 Teal : #218380;
 
 */
+
+/*font pairing
+
+lobster + roboto condensed
+Lobster & Cabin
+
+*/
+
+/*Questions en suspend
+
+regEx sur url by letter?
+probléme sur byletter si on browse by letter
+les drapeaux?
+comment récupere les index des listes fetch?
+
+slice des résultats et pagination
+
+pb: si arr.length === o est reconnu comme undefined au lancement? ma solution !arr
+
+
+src\Containers\ByLetter\ByLetter.js
+  Line 29:6:  React Hook useEffect has a missing dependency: 'params.letter'.
+   Either include it or remove the dependency array  react-hooks/exhaustive-dep
+
+*/
+
+
+h1, h2 {
+
+    text-decoration: underline;
+    text-align: center;
+}
