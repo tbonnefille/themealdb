@@ -74,7 +74,7 @@ function Home() {
 
       <section>
 
-        <h2>choix par région</h2>
+        <h2>choix par style</h2>
 
         <div className="region">
         

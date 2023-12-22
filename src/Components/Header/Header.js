@@ -2,7 +2,7 @@ import "./header.css";
 
 import { Link } from "react-router-dom";
 
-import Nav from "../Nav/Nav";
+
 
 
 
@@ -30,7 +30,7 @@ function Header() {
             <div className="letterSearch">
                 <div>THE Meal DATABASE</div>
 
-                <Nav />
+             
 
                 <div>choix par lettre</div>
 
@@ -73,7 +73,7 @@ function Header() {
 
             <div className="searchEngine">
 
-                <Link className="menu" to="/">Home</Link>
+                <Link  to="/"><div className="homeBtt">Home</div></Link>
 
                 <input placceholder="search bar"
 

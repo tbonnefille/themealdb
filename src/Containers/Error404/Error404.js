@@ -14,7 +14,7 @@ function Error404() {
 
       <div className="errorTxt">Oops! Cette page n'exite pas!</div>
 
-      <Link to="/home">Retourner à la page d'acceuil</Link>
+      <Link to="/">Retourner à la page d'acceuil</Link>
 
 
 

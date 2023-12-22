@@ -26,7 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/ByLetter/:letter" element={<ByLetter />} />
           <Route path="/Meal/:idMeal" element={<Meal />} />
-          <Route path="/Ingredient" element={<Ingredient />} />
+          <Route path="/Ingredient/:ingredientId" element={<Ingredient />} />
           <Route path="/Area/:countryId" element={<Area />} />
           <Route path="/Category/:catId" element={<Category />} />
           <Route path="/*" element={<Error404 />} />
