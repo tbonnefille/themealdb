@@ -4,49 +4,117 @@
     margin-right: 200px;
     margin-top: 50px;
     margin-bottom: 50px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
-.mealInfo {
 
-    border: 2px solid brown;
+
+.mealInfoBox {
+
+    display: flex;
+    margin-bottom: 50px;
+
+
 }
 
 
 
 .bigMeal {
 
-    height: 450px;
-    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    border: 2px solid black;
-   
-    
+
 }
 
 
 .bigImg {
 
     object-fit: cover;
-    width: 100%;
+    height: 450px;
+    width: 450px;
+    border-radius: 5%;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 5px 15px -3px rgba(0, 0, 0, 0.6);
+
+}
+
+
+
+
+.mealTxt {
+
+    text-align: center;
 }
 
 
 
-.recette {
+.mealInfo {
 
-    border: 2px solid green;
+
+    margin: 10px;
+    padding: 10px;
+   
+}
+
+
+
+.mealInfoSlab {
+
+    margin: 15px;
+}
+
+.areaBtt {
+
+
+    background-color: #bb0b0b;
+    margin: 10px;
+    padding:5px;
+    border: 2px solid aliceblue;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    border-radius: 25px;
+    display: inline;
 
 }
+
+
+.catBtt {
+
+
+    background-color: #883677;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid aliceblue;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    border-radius: 25px;
+    display: inline;
+
+}
+
+
+
+
+
+
+
 
 .mealInstructions {
 
-    border: 5px solid skyblue;
+
+    margin: 10px;
+    padding: 10px;
+
 }
 
 
@@ -54,7 +122,9 @@
 .mesures {
 
     margin: 10px;
-    border: 2px solid salmon;
+    padding: 10px;
+
+
 }
 
 
@@ -63,11 +133,8 @@
 
 .ingredients {
 
- 
-  border: 2px solid fuchsia;
-  background-color: beige;
-  text-align: center;
-  margin: 10px;
- 
+    text-align: center;
+
+
 
 }

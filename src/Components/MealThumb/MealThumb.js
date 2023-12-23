@@ -13,13 +13,18 @@ function MealThumb(props) {
         <Link to={`/meal/${idMeal}`}>
 
 
+
             <div className="MealThumb">
 
-                <img src={props.meal.strMealThumb} className="cardImg" alt="" />
+
+
+                <img src={props.meal.strMealThumb} className="cardImg" alt={props.meal.strMeal} />
 
                 <div className="cardTxt">{props.meal.strMeal}</div>
 
+
             </div>
+
 
         </Link>
 

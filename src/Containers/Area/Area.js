@@ -39,7 +39,7 @@ function Area() {
       <section>
 
 
-        <h1>Plats de la région "{params.countryId}"</h1>
+        <h1>Plats dans le style "{params.countryId}"</h1>
 
 
 

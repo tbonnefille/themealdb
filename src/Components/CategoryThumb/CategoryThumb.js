@@ -22,7 +22,7 @@ function CategoryThumb(props) {
 
             <img src={props.category.strCategoryThumb} className="cardImg" alt="" />
 
-            <div className="cardTxt">{props.category.strCategory}</div>
+            <div className="cardTxtCat">{props.category.strCategory}</div>
 
         </div>
 

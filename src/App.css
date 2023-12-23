@@ -18,24 +18,56 @@ Lobster & Cabin
 
 regEx sur url by letter?
 probléme sur byletter si on browse by letter
-les drapeaux?
+
 comment récupere les index des listes fetch?
 
-slice des résultats et pagination
+comment régpérer la description des ingrédient qui est dans liste des ingredient et pas dans filter ingredient
+
+slice des résultats et pagination?
 
 pb: si arr.length === o est reconnu comme undefined au lancement? ma solution !arr
+
+pb : animations et hover marchent mal
+
 
 
 src\Containers\ByLetter\ByLetter.js
   Line 29:6:  React Hook useEffect has a missing dependency: 'params.letter'.
    Either include it or remove the dependency array  react-hooks/exhaustive-dep
 
+
+kisusu est buggé
+
+
 */
 
+.App {
 
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
 
 h1, h2 {
 
+
+  font-family: 'Lobster', Georgia, Times, serif;
+
     text-decoration: underline;
     text-align: center;
+}
+
+h1 {
+
+  font-size: 3.5rem;
+ 
+}
+
+h2 {
+
+  font-size: 2rem;
+}
+
+a {
+
+  text-decoration: none;
+  color: black;
 }
