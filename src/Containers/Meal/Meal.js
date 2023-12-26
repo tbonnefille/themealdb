@@ -11,9 +11,7 @@ function Meal() {
   const params = useParams();
 
 
-
-
-  console.log("params = ", params.idMeal)
+  //console.log("params = ", params.idMeal)
 
 
   const [meal, setMeal] = useState([])
@@ -32,23 +30,10 @@ function Meal() {
   }, []);
 
 
-  console.log("le plat est ", meal.meals)
+  //console.log("le plat est ", meal.meals)
 
   const repas = meal.meals;
 
-  /* faire un tableau des 20 ingredients
-  boucle qui verifie si la valeur esy non nulle/utiliser filter?
-  mettre les ingredients à valeur non-nulle dans un nouveau tableau
-  déployer le nouveau tableau dans la section des ingredients
-  
-  
-  
-  
-  
-  
-  
-  
-  */
 
   return (
 
@@ -59,8 +44,35 @@ function Meal() {
         <div>rien</div>
       ) : (
         repas.map((items) => {
+                
 
-          const ingredientId = items.strIngredient1;
+          const ingredientsArr = [];
+
+          for (let i = 1; i <= 20; i++) {
+            if (items[`strIngredient${i}`]) {
+              ingredientsArr.push(`${items[`strIngredient${i}`]}`);
+
+            } else {
+              break;
+            }
+          }
+
+        //  console.log("les ingredients sont:", ingredientsArr)
+
+
+          const qteMesures = [];
+
+          for (let i = 1; i <= 20; i++) {
+            if (items[`strIngredient${i}`]) {
+              qteMesures.push(`${items[`strIngredient${i}`]} - ${items[`strMeasure${i}`]}`);
+            } else {
+              break;
+            }
+          }
+
+        //  console.log("les qte & mesures sont :", qteMesures)
+
+
 
           return <div>
 
@@ -68,41 +80,37 @@ function Meal() {
 
             <div className="mealInfoBox">
 
-              <section className="bigMeal">
+              <div className="mealInfo">
 
-                <img src={items.strMealThumb} className="bigImg" alt={items.strMeal} />
-
-              </section>
-
-
-
-              <div className="mealTxt">
-
-                <section className="mealInfo">
+                <section className="mealInfoTxt">
 
                   <h2>Informations</h2>
 
-                  <Link to={`/area/${items.strArea}`}><div className="mealInfoSlab">style : <div className="areaBtt">{items.strArea}  </div> </div></Link>
+                  <Link to={`/area/${items.strArea}`}><div className="mealInfoSlab">style : <div className="areaBtt">{items.strArea}  </div></div></Link>
 
-                  <Link to={`/category/${items.strCategory}`}> <div className="mealInfoSlab"> catégorie : <div className="catBtt">  {items.strCategory} </div>   </div></Link>
+                  <Link to={`/category/${items.strCategory}`}> <div className="mealInfoSlab"> catégorie : <div className="catBtt">  {items.strCategory} </div></div></Link>
 
-              
+                  <Link to={`${items.strYoutube}`}><div className="mealInfoSlab"><div className="tealBtt">lien youtube</div></div></Link>
 
-
-                  <Link to={`${items.strYoutube}`}><div>lien youtube</div></Link>
-
-                  <Link to={`${items.strSource}`}><div>source</div></Link>
+                  <Link to={`${items.strSource}`}><div className="mealInfoSlab"><div className="tealBtt">source</div></div></Link>
 
                   <div> Tags :  {items.strTags} </div>
-                  
+
                 </section>
 
 
 
+                <section className="bigMeal">
+
+                  <img src={items.strMealThumb} className="bigImg" alt={items.strMeal} />
+
+                </section>
+
+              </div>
+
+              <div className="mealTxt">
+
                 <section className="recette">
-
-
-
 
                   <div className="mealInstructions">
 
@@ -115,30 +123,16 @@ function Meal() {
 
                     <h2>Mesures</h2>
 
-                    <div>{items.strIngredient1}  {items.strMeasure1}</div>
-                    <div>{items.strIngredient2}  {items.strMeasure2}</div>
-                    <div>{items.strIngredient3}  {items.strMeasure3}</div>
-                    <div>{items.strIngredient4}  {items.strMeasure4}</div>
-                    <div>{items.strIngredient5}  {items.strMeasure5}</div>
-                    <div>{items.strIngredient6}  {items.strMeasure6}</div>
-                    <div>{items.strIngredient7}  {items.strMeasure7}</div>
-                    <div>{items.strIngredient8}  {items.strMeasure8}</div>
-                    <div>{items.strIngredient9}  {items.strMeasure9}</div>
-                    <div>{items.strIngredient10}  {items.strMeasure10}</div>
-                    <div>{items.strIngredient11}  {items.strMeasure11}</div>
-                    <div>{items.strIngredient12}  {items.strMeasure12}</div>
-                    <div>{items.strIngredient13}  {items.strMeasure13}</div>
-                    <div>{items.strIngredient14}  {items.strMeasure14}</div>
-                    <div>{items.strIngredient15}  {items.strMeasure15}</div>
-                    <div>{items.strIngredient16}  {items.strMeasure16}</div>
-                    <div>{items.strIngredient17}  {items.strMeasure17}</div>
-                    <div>{items.strIngredient18}  {items.strMeasure18}</div>
-                    <div>{items.strIngredient19}  {items.strMeasure19}</div>
-                    <div>{items.strIngredient20}  {items.strMeasure20}</div>
+                    {qteMesures.length === 0 ? (
+                      <div>rien</div>
+                    ) : (
+                      qteMesures.map((qtm) => {
+                        return <div>  {qtm}  </div>
 
+                      })
+                    )}
 
                   </div>
-
 
 
                 </section>
@@ -148,146 +142,42 @@ function Meal() {
 
             </div>
 
+
             <section className="ingredients">
+
 
               <h2>Ingrédients</h2>
 
               <div className="cardHolder">
 
 
+                {ingredientsArr.length === 0 ? (
+                  <div>rien</div>
+                ) : (
+                  ingredientsArr.map((ing) => {
+                    return <Link to={`/ingredient/${ing}`}>
 
 
-                <Link to={`/ingredient/${ingredientId}`}>
+                      <div className="MealThumb">
+                        <img src={`https://www.themealdb.com/images/ingredients/${ing}.png`} className="cardImg" alt={ing} />
+                        <div>{ing}</div>
+                      </div>
 
 
-                  <div className="MealThumb">
-                    <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                    <div>{items.strIngredient1}</div>
-                  </div>
+                    </Link>
 
 
-                </Link>
+                  })
+                )}
 
-
-
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient2}.png`} className="cardImg" alt={items.strIngredient2} />
-                  <div>{items.strIngredient2}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient3}.png`} className="cardImg" alt={items.strIngredient3} />
-                  <div>{items.strIngredient3}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient4}.png`} className="cardImg" alt={items.strIngredient4} />
-                  <div>{items.strIngredient4}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient5}.png`} className="cardImg" alt={items.strIngredient5} />
-                  <div>{items.strIngredient5}</div>
-                </div>
-
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient1}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient1}</div>
-                </div>
-
-                <div className="MealThumb">
-                  <img src={`https://www.themealdb.com/images/ingredients/${items.strIngredient20}.png`} className="cardImg" alt={items.strIngredient1} />
-                  <div>{items.strIngredient20}</div>
-                </div>
 
               </div>
-
 
 
             </section>
 
 
-
-
-
-
-
-
-
-
-
           </div>;
-
-
 
 
         })

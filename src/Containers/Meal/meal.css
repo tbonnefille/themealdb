@@ -22,7 +22,17 @@
 
 }
 
+.mealInfo {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}
 
 .bigMeal {
 
@@ -56,7 +66,7 @@
 
 
 
-.mealInfo {
+.mealInfoTxt {
 
 
     margin: 10px;
@@ -76,7 +86,7 @@
 
     background-color: #bb0b0b;
     margin: 10px;
-    padding:5px;
+    padding:7px;
     border: 2px solid aliceblue;
     display: flex;
     align-items: center;
@@ -102,7 +112,20 @@
 
 }
 
+.tealBtt {
 
+
+    background-color: #218380;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid aliceblue;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    border-radius: 25px;
+    display: inline;
+
+}
 
 
 
