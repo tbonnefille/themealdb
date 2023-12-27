@@ -1,0 +1,25 @@
+.SearchEngine {
+
+   
+    border: 2px solid aliceblue;
+    padding: 20px;
+    text-align: center;
+    background-color:#1d7874;
+    color: aliceblue;
+    font-family: 'Lobster', Georgia, Times, serif;
+    text-decoration: underline;
+}
+
+
+
+#search {
+
+    height: 30px;
+    width: 300px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid black;
+    font-size: 1rem;
+}

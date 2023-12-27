@@ -44,7 +44,7 @@ function Meal() {
         <div>rien</div>
       ) : (
         repas.map((items) => {
-                
+
 
           const ingredientsArr = [];
 
@@ -57,7 +57,7 @@ function Meal() {
             }
           }
 
-        //  console.log("les ingredients sont:", ingredientsArr)
+          //  console.log("les ingredients sont:", ingredientsArr)
 
 
           const qteMesures = [];
@@ -70,7 +70,7 @@ function Meal() {
             }
           }
 
-        //  console.log("les qte & mesures sont :", qteMesures)
+          //  console.log("les qte & mesures sont :", qteMesures)
 
 
 
@@ -90,9 +90,9 @@ function Meal() {
 
                   <Link to={`/category/${items.strCategory}`}> <div className="mealInfoSlab"> catégorie : <div className="catBtt">  {items.strCategory} </div></div></Link>
 
-                  <Link to={`${items.strYoutube}`}><div className="mealInfoSlab"><div className="tealBtt">lien youtube</div></div></Link>
+                  <Link to={`${items.strYoutube}`}><div className="mealInfoSlab"><div className="skoBtt">lien youtube</div></div></Link>
 
-                  <Link to={`${items.strSource}`}><div className="mealInfoSlab"><div className="tealBtt">source</div></div></Link>
+                  <Link to={`${items.strSource}`}><div className="mealInfoSlab"><div className="skoBtt">source</div></div></Link>
 
                   <div> Tags :  {items.strTags} </div>
 
@@ -157,12 +157,10 @@ function Meal() {
                   ingredientsArr.map((ing) => {
                     return <Link to={`/ingredient/${ing}`}>
 
-
                       <div className="MealThumb">
                         <img src={`https://www.themealdb.com/images/ingredients/${ing}.png`} className="cardImg" alt={ing} />
                         <div>{ing}</div>
                       </div>
-
 
                     </Link>
 

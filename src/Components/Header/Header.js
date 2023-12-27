@@ -2,8 +2,13 @@ import "./header.css";
 
 import { Link } from "react-router-dom";
 
+import SearchEngine from "../SearchEngine/SearchEngine";
+
 
 function Header() {
+
+
+
 
 
     return (
@@ -19,21 +24,8 @@ function Header() {
             </div>
 
 
+           <SearchEngine />
 
-
-
-
-            <div className="searchEngine">
-
-
-
-            <input
-            type="text"
-            id="search"
-            placeholder="Search for meals or keywords"
-          />
-
-            </div>
 
             <div className="headerBtt">
 

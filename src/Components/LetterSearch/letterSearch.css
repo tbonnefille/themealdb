@@ -1,11 +1,10 @@
-
 .LetterSearch {
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     margin: 20px;
     margin-bottom: 50px;
 
@@ -33,12 +32,12 @@
 
     display: flex;
     justify-content: center;
-padding: 5px;
-margin: 5px;
-background-color:  #218380;
-color: aliceblue;
-border: 1px solid aliceblue;
-width: 25px;
-border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #1d7874;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    width: 25px;
+    border-radius: 10px;
 
 }

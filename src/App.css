@@ -3,6 +3,11 @@
 Hunyadi yellow : #dda448;
 Engeneering orange : #bb0b0b;
 Plum: #883677;
+skobeloff: #1d7874;
+
+
+
+
 Teal : #218380;
 
 */
@@ -46,7 +51,7 @@ kisusu est buggé
   font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 
-h1, h2 {
+h1, h2, h3 {
 
 
   font-family: 'Lobster', Georgia, Times, serif;

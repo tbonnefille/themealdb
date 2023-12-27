@@ -10,8 +10,12 @@ import Ingredient from "./Containers/Ingredient/Ingredient";
 import Meal from "./Containers/Meal/Meal";
 import Area from './Containers/Area/Area';
 import Category from './Containers/Category/Category';
+import SearchResults from './Containers/SearchResults/SearchResults';
 import Error404 from './Containers/Error404/Error404';
 import Footer from "./Components/Footer/Footer";
+
+
+
 
 
 function App() {
@@ -29,6 +33,7 @@ function App() {
           <Route path="/Ingredient/:ingredientId" element={<Ingredient />} />
           <Route path="/Area/:countryId" element={<Area />} />
           <Route path="/Category/:catId" element={<Category />} />
+          <Route path="/SearchResults/:searchId" element={<SearchResults />} />
           <Route path="/*" element={<Error404 />} />
         </Routes>
 
