@@ -3,7 +3,7 @@
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 50px;
-    margin-bottom: 50px;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,9 +39,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    transition: all .5s ease-in-out;
 
 }
+
+.bigMeal:hover {
+
+    transform: scale(1.2);
+
+}
+
 
 
 .bigImg {
@@ -93,8 +100,17 @@
     color: aliceblue;
     border-radius: 25px;
     display: inline;
+    transition: all .1s ease-in-out;
 
 }
+
+.areaBtt:hover {
+
+    background-color: #1d7874;
+
+}
+
+
 
 
 .catBtt {
@@ -109,11 +125,18 @@
     color: aliceblue;
     border-radius: 25px;
     display: inline;
+    transition: all .1s ease-in-out;
 
 }
 
-.skoBtt {
+.catBtt:hover {
 
+    background-color: #1d7874;
+
+}
+
+
+.skoBtt {
 
     background-color: #1d7874;
     margin: 10px;
@@ -123,10 +146,18 @@
     align-items: center;
     color: aliceblue;
     border-radius: 25px;
+   text-align: center;
+    transition: all .1s ease-in-out;
     display: inline;
 
 }
 
+.skoBtt:hover {
+
+    
+    background-color: #bb0b0b;
+
+}
 
 
 
@@ -152,12 +183,3 @@
 
 
 
-
-
-.ingredients {
-
-    text-align: center;
-
-
-
-}

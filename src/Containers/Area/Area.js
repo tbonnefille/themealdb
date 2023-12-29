@@ -9,9 +9,7 @@ function Area() {
 
   const params = useParams();
 
-
-  console.log("params = ", params.countryId)
-
+  //console.log("params = ", params.countryId)
 
   const [area, setArea] = useState([])
 
@@ -29,18 +27,17 @@ function Area() {
   }, []);
 
 
-  console.log("les plats coorespondant au pays ", area.meals)
+  //console.log("les plats coorespondant au pays ", area.meals)
 
 
   return (
     <div className="Area">
 
 
-      <section>
+      <section className="carddisplay">
 
 
         <h1>Plats dans le style "{params.countryId}"</h1>
-
 
 
         <div className="cardHolder">
@@ -48,8 +45,8 @@ function Area() {
           {!area.meals ? (
             <div>rien</div>
           ) : (
-            area.meals.map((items) => {
-              return <div>{<MealThumb meal={items} />}</div>;
+            area.meals.map((items, i) => {
+              return <div key={i}>{<MealThumb meal={items} />}</div>;
             })
           )}
 

@@ -27,7 +27,7 @@ function Home() {
     fetchCategory();
   }, []);
 
-  //console.log("les catégories sont", category.categories)
+  console.log("les catégories sont", category.categories)
 
 
 
@@ -68,11 +68,11 @@ function Home() {
 
         <div className="cardHolder">
 
-          {category.length === 0 ? (
+          {!category.categories ? (
             <div>rien</div>
           ) : (
-            category.categories.map((category) => {
-              return <div>{<CategoryThumb category={category} />}</div>;
+            category.categories.map((category,i) => {
+              return <div key={i}>{<CategoryThumb category={category} />}</div>;
 
             })
           )}
@@ -91,9 +91,9 @@ function Home() {
           {area.length === 0 ? (
             <div>rien</div>
           ) : (
-            area.meals.map((country) => {
+            area.meals.map((country,i) => {
 
-              return <div>{<Country country={country} />}</div>;
+              return <div key={i}>{<Country country={country} />}</div>;
 
             })
           )}

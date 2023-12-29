@@ -2,14 +2,32 @@
 
    
     border: 2px solid aliceblue;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     background-color:#1d7874;
     color: aliceblue;
-    font-family: 'Lobster', Georgia, Times, serif;
-    text-decoration: underline;
+    
+    
 }
 
+.searchTitle {
+
+    font-family: 'Lobster', Georgia, Times, serif;
+    text-decoration: underline;
+
+}
+
+.searchBar {
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+   
+    margin: 5px;
+    height: 50px;
+}
 
 
 #search {
@@ -19,7 +37,25 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     text-align: center;
-    margin-top: 10px;
-    border: 1px solid black;
+  
+   
     font-size: 1rem;
+}
+
+
+.searchBtt {
+
+    height: 30px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    background-color: #bb0b0b;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    border-left: none;
+
 }

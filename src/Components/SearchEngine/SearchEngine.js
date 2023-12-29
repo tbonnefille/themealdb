@@ -1,64 +1,67 @@
 import "./searchEngine.css";
 
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-/*
-
-1. récupérer la valeur de l'input
-
-2.Mettre la valeur dans le lien vers la page de résultat de recherche
-
-3. Dans la page résultat, récupérer la valzur avec usepararms
-
-4. fetch avec www.themealdb.com/api/json/v1/1/search.php?s=useparams
-
-5; .map les résultats du fetch dans une section
-
-
-*/
 
 function SearchEngine() {
 
 
-    let searchId = "ar";
-
-    //let searchId = search.value;
 
 
+    function refreshPage() {
+
+
+        setInputText("");
+        //window.location.reload(false);
+
+    }
+
+
+
+    const [inputText, setInputText] = useState("");
+
+
+    let searchId = `${inputText}`;
 
 
     return (
 
+
+
         <div className="SearchEngine">
 
-            <div>faire une recherche </div>
+            <div className="searchTitle">faire une recherche </div>
+
+            <div className="searchBar">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search for meals or keywords"
+                    value={inputText}
+                    onChange={(event) => {
+                        setInputText(event.target.value);
+                    }}
+                ></input>
 
 
-            <input
-                type="text"
-                id="search"
-                placeholder="Search for meals or keywords"
+                <Link to={`/searchResults/${searchId}`}>
 
 
-            />
+                    <div className="searchBtt">
 
-            <Link to={`/searcResults/${searchId}`}>
 
-                <button> lien vers résultats de recherche </button>
-
-            </Link>
+                        <div onClick={refreshPage}>Q</div>
 
 
 
+                    </div>
 
 
-            <Link to={`/searchResults/${searchId}`}>
+                </Link>
 
-                <button> ex </button>
-
-            </Link>
-
-
+            </div>
 
         </div>
 

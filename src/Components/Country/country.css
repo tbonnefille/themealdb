@@ -1,31 +1,25 @@
-
-
 .Country {
 
-  
+
     font-size: 2rem;
 
 
     display: flex;
     justify-content: center;
     align-items: center;
-padding: 10px;
-margin: 5px;
-background-color: #bb0b0b;
-color: aliceblue;
-border: 1px solid aliceblue;
+    padding: 10px;
+    margin: 5px;
+    background-color: #bb0b0b;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+    transition: all .1s ease-in-out;
 
-border-radius: 10px;
-
-
-
-
+}
 
 
+.Country:hover {
 
+    transform: scale(1.1);
 
-
-
-
-
-    }
+}

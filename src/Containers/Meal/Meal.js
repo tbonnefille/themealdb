@@ -43,7 +43,7 @@ function Meal() {
       {!repas ? (
         <div>rien</div>
       ) : (
-        repas.map((items) => {
+        repas.map((items,i) => {
 
 
           const ingredientsArr = [];
@@ -74,7 +74,7 @@ function Meal() {
 
 
 
-          return <div>
+          return <div key={i}>
 
             <h1>{items.strMeal}</h1>
 
@@ -86,9 +86,9 @@ function Meal() {
 
                   <h2>Informations</h2>
 
-                  <Link to={`/area/${items.strArea}`}><div className="mealInfoSlab">style : <div className="areaBtt">{items.strArea}  </div></div></Link>
+                  <Link to={`/area/${items.strArea}`}><div className="mealInfoSlab">style : <div className="areaBtt">{items.strArea}</div></div></Link>
 
-                  <Link to={`/category/${items.strCategory}`}> <div className="mealInfoSlab"> catégorie : <div className="catBtt">  {items.strCategory} </div></div></Link>
+                  <Link to={`/category/${items.strCategory}`}> <div className="mealInfoSlab"> catégorie : <div className="catBtt">{items.strCategory}</div></div></Link>
 
                   <Link to={`${items.strYoutube}`}><div className="mealInfoSlab"><div className="skoBtt">lien youtube</div></div></Link>
 
@@ -126,8 +126,8 @@ function Meal() {
                     {qteMesures.length === 0 ? (
                       <div>rien</div>
                     ) : (
-                      qteMesures.map((qtm) => {
-                        return <div>  {qtm}  </div>
+                      qteMesures.map((qtm, i) => {
+                        return <div key={i}>  {qtm}  </div>
 
                       })
                     )}
@@ -143,7 +143,7 @@ function Meal() {
             </div>
 
 
-            <section className="ingredients">
+            <section className="cardDisplay">
 
 
               <h2>Ingrédients</h2>
@@ -154,15 +154,15 @@ function Meal() {
                 {ingredientsArr.length === 0 ? (
                   <div>rien</div>
                 ) : (
-                  ingredientsArr.map((ing) => {
-                    return <Link to={`/ingredient/${ing}`}>
+                  ingredientsArr.map((ing, i) => {
+                    return <div key={i}><Link to={`/ingredient/${ing}`}>
 
                       <div className="MealThumb">
                         <img src={`https://www.themealdb.com/images/ingredients/${ing}.png`} className="cardImg" alt={ing} />
                         <div>{ing}</div>
                       </div>
 
-                    </Link>
+                    </Link></div>
 
 
                   })

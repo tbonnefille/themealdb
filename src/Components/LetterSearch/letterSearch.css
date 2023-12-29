@@ -39,5 +39,12 @@
     border: 1px solid aliceblue;
     width: 25px;
     border-radius: 10px;
+    transition: all .1s ease-in-out;
 
+}
+
+
+.letter:hover {
+
+    transform: scale(1.1);
 }

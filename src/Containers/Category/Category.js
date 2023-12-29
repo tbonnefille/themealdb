@@ -13,7 +13,7 @@ function Category() {
   const params = useParams();
 
 
-  console.log("params = ", params.catId)
+  //console.log("params = ", params.catId)
 
   const [category, setCategory] = useState([])
 
@@ -31,19 +31,17 @@ function Category() {
   }, []);
 
 
-  console.log("les plats coorespondant à la categorie ", category)
+  //console.log("les plats coorespondant à la categorie ", category)
 
 
   return (
     <div className="Category">
 
 
+      <section className="cardDisplay">
 
-      <section>
-     
 
         <h1>Plats dans la catégorie "{params.catId}"</h1>
-
 
 
         <div className="cardHolder">
@@ -51,24 +49,12 @@ function Category() {
           {category.length === 0 ? (
             <div>rien</div>
           ) : (
-            category.meals.map((items) => {
-              return <div>{<MealThumb meal={items} />}</div>;
+            category.meals.map((items, i) => {
+              return <div key={i} >{<MealThumb meal={items} />}</div>;
             })
           )}
 
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
       </section>
 

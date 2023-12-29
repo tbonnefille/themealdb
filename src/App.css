@@ -6,10 +6,6 @@ Plum: #883677;
 skobeloff: #1d7874;
 
 
-
-
-Teal : #218380;
-
 */
 
 /*font pairing
@@ -24,15 +20,22 @@ Lobster & Cabin
 regEx sur url by letter?
 probléme sur byletter si on browse by letter
 
-comment récupere les index des listes fetch?
 
-comment régpérer la description des ingrédient qui est dans liste des ingredient et pas dans filter ingredient
 
-slice des résultats et pagination?
+garlic sauce : plante pour ingredient strDescription
 
-pb: si arr.length === o est reconnu comme undefined au lancement? ma solution !arr
+la page ingredient s'ouvre au milieu, pas en haut
 
-pb : animations et hover marchent mal
+
+
+slice des résultats et pagination? -> creer un state de la page courante(slice differement ex de 1 à 10, puis 11 à 20
+
+
+
+src\Containers\SearchResults\SearchResults.js
+  Line 31:8:  React Hook useEffect has a missing dependency: 'params.searchId'.
+   Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
 
 
 
@@ -75,4 +78,10 @@ a {
 
   text-decoration: none;
   color: black;
+}
+
+
+.cardDisplay {
+
+  margin-bottom: 50px;
 }

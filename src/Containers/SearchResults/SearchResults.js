@@ -11,9 +11,7 @@ function SearchResults() {
 
     const params = useParams();
 
-
-    console.log("params = ", params.searchId)
-
+   // console.log("params = ", params.searchId)
 
     const [searchResults, setSearchResults] = useState([])
 
@@ -38,7 +36,7 @@ function SearchResults() {
         <div className="SearchResults">
 
 
-            <section >
+            <section className="cardDisplay" >
 
                 <h1>Résultats de recherche pour le terme "{params.searchId}"</h1>
 
@@ -47,8 +45,8 @@ function SearchResults() {
                     {!searchResults.meals ? (
                         <div>rien</div>
                     ) : (
-                        searchResults.meals.map((items) => {
-                            return <div>{<MealThumb meal={items} />}</div>;
+                        searchResults.meals.map((items,i) => {
+                            return <div key={i}>{<MealThumb meal={items} />}</div>;
                         })
                     )}
 

@@ -39,12 +39,6 @@
 }
 
 
-
-
-
-
-
-
 .homeBtt {
 
 
@@ -58,8 +52,15 @@
     border-radius: 25px;
     display: flex;
     justify-content: center;
-   
+    transition: all .1s ease-in-out;
     
+}
+
+
+.homeBtt:hover {
+
+    transform: scale(1.075);
+
 }
 
 

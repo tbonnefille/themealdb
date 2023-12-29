@@ -30,9 +30,9 @@ function RandomMeal() {
       {!random.meals ? (
         <div>rien</div>
       ) : (
-        random.meals.map((items) => {
+        random.meals.map((items,i) => {
 
-          return <Link to={`/meal/${items.idMeal}`}><div className="homeBtt">choisir un plat au hasard</div></Link>
+          return <div key={i}><Link to={`/meal/${items.idMeal}`}><div className="homeBtt">  un plat au hasard  </div></Link></div>
 
 
         })

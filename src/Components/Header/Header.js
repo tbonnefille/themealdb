@@ -8,18 +8,13 @@ import SearchEngine from "../SearchEngine/SearchEngine";
 function Header() {
 
 
-
-
-
     return (
-
 
         <div className="Header">
 
             <div className="logo">
 
                 <div>KOUIZINE</div>
-
 
             </div>
 

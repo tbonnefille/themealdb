@@ -13,6 +13,8 @@ function ByLetter() {
 
   //console.log("params = ", params.letter)
 
+  //si params.leetter a + de 2 lettre retour a home usenavigation
+
   const [byLetterMeal, setByLetterMeal] = useState([])
 
 
@@ -29,10 +31,7 @@ function ByLetter() {
   }, []);
 
 
-  console.log("les plats coorespondant à la lettre sont ", byLetterMeal.meals)
-
-
-
+  //console.log("les plats coorespondant à la lettre sont ", byLetterMeal.meals)
 
 
 
@@ -40,11 +39,11 @@ function ByLetter() {
     <div className="ByLetter">
 
 
-<h1>Plats commençants par la lettre "{params.letter}"</h1>
+      <h1>Plats commençants par la lettre "{params.letter}"</h1>
 
 
 
-      <section >
+      <section className="cardDisplay">
 
 
         <div className="cardHolder">
@@ -52,21 +51,12 @@ function ByLetter() {
           {byLetterMeal.length === 0 ? (
             <div>rien</div>
           ) : (
-            byLetterMeal.meals.map((meal) => {
-              return <div>{<MealThumb meal={meal} />}</div>;
+            byLetterMeal.meals.map((meal,i) => {
+              return <div key={i}>{<MealThumb meal={meal} />}</div>;
             })
           )}
 
         </div>
-
-
-
-
-
-
-
-
-
 
       </section>
 
