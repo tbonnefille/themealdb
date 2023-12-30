@@ -12,8 +12,6 @@
 }
 
 
-
-
 .mealInfoBox {
 
     display: flex;
@@ -39,16 +37,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .5s ease-in-out;
+  
 
 }
-
-.bigMeal:hover {
-
-    transform: scale(1.2);
-
-}
-
 
 
 .bigImg {

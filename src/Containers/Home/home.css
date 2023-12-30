@@ -46,3 +46,10 @@
 margin: 5px;
 
 }
+
+
+
+.test {
+
+    text-transform: capitalize;
+}

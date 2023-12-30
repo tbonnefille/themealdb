@@ -13,9 +13,22 @@ function Ingredient() {
 
   //console.log("params = ", params.ingredientId)
 
-  const ingr = params.ingredientId;
+  /*
+  Ici, on fait en sorte que les noms de l'ingrédient commencent TOUJOURS par une majuscule,
+  sinon myfilteredList ne trouvera jamais l'élément recherché
+  */
 
-  //console.log("ingr = " ,ingr)
+  const mySentence = `${params.ingredientId}`;
+  const words = mySentence.split(" ");
+
+  const res =
+
+    words.map((word) => {
+      return word[0].toUpperCase() + word.substring(1);
+    }).join(" ");
+
+
+  //console.log("le résultat est :", res)
 
 
   const [ingredient, setIngredient] = useState([])
@@ -24,7 +37,7 @@ function Ingredient() {
   useEffect(() => {
     const fetchIngredient = async () => {
       const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/filter.php?i=${params.ingredientId}`
+        `https://www.themealdb.com/api/json/v1/1/filter.php?i=${res}`
       );
       const responseApi = await response.json();
       setIngredient(responseApi);
@@ -56,41 +69,46 @@ function Ingredient() {
 
   const myArr = ingredientList.meals;
 
+  const myCurrentIngredient = `${res}`;
 
-  const myCurrentIngredient = `${ingr}`;
-
-
-  if (!myArr) {
+  let myDescription ="";
 
 
-    console.log(" le tableau est undefined")
+
+  if (!myArr || myArr.length === 0) {
+
+
+    //rien à faire
 
   }
 
+
   else {
 
-    //console.log("le tableau existe")
-
-
-    var myfilteredList = ingredientList.meals.filter((el) => {
+   
+    const myfilteredList = ingredientList.meals.filter((el) => {
       return el.strIngredient === myCurrentIngredient;
     });
 
 
-    //console.log("myfilteredList",myfilteredList)
+    // console.log("myfilteredList",myfilteredList)
 
 
     // bien vérifier que la longueur du tableau est non nulle
-    var myDescription = myfilteredList[0].strDescription;
+    myDescription = myfilteredList[0].strDescription;
     // console.log("myDescription", myDescription);
 
+
+
   }
+
+
 
   let descriptionTxt = "";
 
   if (!myDescription) {
 
-    descriptionTxt = "-BIENTOT DISPONIBLE-";
+    descriptionTxt = "- BIENTOT DISPONIBLE -";
 
   } else {
 
@@ -100,10 +118,10 @@ function Ingredient() {
 
 
   return (
-    
+
     <div className="Meal">
 
-      <h1>{params.ingredientId}</h1>
+      <h1>{res}</h1>
 
       <div className="plat">
 
@@ -133,7 +151,7 @@ function Ingredient() {
 
       <section className="cardDisplay">
 
-        <h2>Plats contenant l'ingrédient "{params.ingredientId}"</h2>
+        <h2>Plats contenant l'ingrédient "{res}"</h2>
 
         <div className="cardHolder">
 

@@ -4,7 +4,71 @@
     justify-content: space-around;
 
     background-color: #dda448;
-   font-size: 1.5rem;
+    font-size: 1.5rem;
     border-top: 2px solid black;
     padding: 10px;
+    
+}
+
+.about {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+
+.aboutTitle {
+
+    text-decoration: underline;
+}
+
+
+.git {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.projectLinks {
+
+    border: 2px solid #dda448;
+    text-decoration: underline;
+
+}
+
+.projectLinks:hover {
+
+    background-color: #bb0b0b;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    border-radius: 20px;
+    
+}
+
+.powered {
+
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+
+.icons {
+
+    display: flex;
+
+}
+
+
+.techIcon {
+
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+
 }

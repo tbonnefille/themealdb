@@ -1,6 +1,6 @@
 import "./searchEngine.css";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -22,7 +22,7 @@ function SearchEngine() {
     const [inputText, setInputText] = useState("");
 
 
-    let searchId = `${inputText}`;
+    const searchId = `${inputText}`;
 
 
     return (
@@ -38,7 +38,7 @@ function SearchEngine() {
                 <input
                     type="text"
                     id="search"
-                    placeholder="Search for meals or keywords"
+                    placeholder="rechercher un plat"
                     value={inputText}
                     onChange={(event) => {
                         setInputText(event.target.value);
