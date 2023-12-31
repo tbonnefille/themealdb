@@ -10,12 +10,9 @@ function Meal() {
 
   const params = useParams();
 
-
   //console.log("params = ", params.idMeal)
 
-
   const [meal, setMeal] = useState([])
-
 
   useEffect(() => {
     const fetchMeal = async () => {
@@ -28,7 +25,6 @@ function Meal() {
 
     fetchMeal();
   }, []);
-
 
   //console.log("le plat est ", meal.meals)
 
@@ -43,7 +39,7 @@ function Meal() {
       {!repas ? (
         <div>rien</div>
       ) : (
-        repas.map((items,i) => {
+        repas.map((items, i) => {
 
 
           const ingredientsArr = [];
@@ -123,14 +119,19 @@ function Meal() {
 
                     <h2>Mesures</h2>
 
-                    {qteMesures.length === 0 ? (
-                      <div>rien</div>
-                    ) : (
-                      qteMesures.map((qtm, i) => {
-                        return <div key={i}>  {qtm}  </div>
+                    <div className="mqt">
 
-                      })
-                    )}
+                      {qteMesures.length === 0 ? (
+                        <div>rien</div>
+                      ) : (
+                        qteMesures.map((qtm, i) => {
+                          return <div key={i}>  {qtm}  </div>
+
+                        })
+                      )}
+
+                    </div>
+
 
                   </div>
 

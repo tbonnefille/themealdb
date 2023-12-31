@@ -4,7 +4,7 @@
     justify-content: space-around;
 
     background-color: #dda448;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     border-top: 2px solid black;
     padding: 10px;
     
@@ -34,16 +34,10 @@
     align-items: center;
 }
 
+
 .projectLinks {
 
-    border: 2px solid #dda448;
-    text-decoration: underline;
-
-}
-
-.projectLinks:hover {
-
-    background-color: #bb0b0b;
+    background-color: #1d7874;
     color: aliceblue;
     border: 2px solid aliceblue;
     border-radius: 20px;
@@ -61,6 +55,12 @@
 .icons {
 
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:#883677 ;
+    border: 1px solid aliceblue;
+    margin-top: 5px;
+    padding: 5px;
 
 }
 

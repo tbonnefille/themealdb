@@ -3,6 +3,8 @@ import "./searchEngine.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import loupe from '../../Assets/loupe.png';
+
 
 function SearchEngine() {
 
@@ -52,7 +54,9 @@ function SearchEngine() {
                     <div className="searchBtt">
 
 
-                        <div onClick={refreshPage}>Q</div>
+                        <div onClick={refreshPage}>
+                             <div><img src={loupe} alt="icone loupe" className="searchIcon" title="rechercher" /></div>
+                             </div>
 
 
 

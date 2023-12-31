@@ -34,7 +34,7 @@ function Area() {
     <div className="Area">
 
 
-      <section className="carddisplay">
+      <section className="cardDisplay">
 
 
         <h1>Plats dans le style "{params.countryId}"</h1>
