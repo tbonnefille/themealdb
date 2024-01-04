@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 import MealThumb from "../../Components/MealThumb/MealThumb";
 
+
 function Area() {
 
   const params = useParams();
@@ -12,7 +13,6 @@ function Area() {
   //console.log("params = ", params.countryId)
 
   const [area, setArea] = useState([])
-
 
   useEffect(() => {
     const fetchArea = async () => {
@@ -24,8 +24,7 @@ function Area() {
     };
 
     fetchArea();
-  }, []);
-
+  }, [params.countryId]);
 
   //console.log("les plats coorespondant au pays ", area.meals)
 

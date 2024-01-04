@@ -13,7 +13,7 @@ function ByLetter() {
   const params = useParams();
 
   //console.log("params = ", params.letter)
- 
+
 
   //si l'url contient plusieures lettres(input direct)
 
@@ -23,25 +23,24 @@ function ByLetter() {
 
   useEffect(() => {
 
-  if (params.letter.length > 1) {
+    if (params.letter.length > 1) {
 
-    navigate("/*");
-  
-  } else {
+      navigate("/*");
 
-   setKeyLetter(params.letter);
+    } else {
+
+      setKeyLetter(params.letter);
+    }
+
+  }, [navigate, params.letter]);
+
+  // console.log("keyLetter = ", keyLetter);
+
+  if (!keyLetter) {
+
+    setKeyLetter(params.letter[0]);
+
   }
-
-  }, [navigate, keyLetter]);
-
- // console.log("keyLetter = ", keyLetter);
-
-
-if (!keyLetter) {
-
-   setKeyLetter(params.letter[0]);
-
-}
 
   const [byLetterMeal, setByLetterMeal] = useState([]);
 
@@ -55,7 +54,7 @@ if (!keyLetter) {
     };
 
     fetchByLetterMeal();
-  }, []);
+  }, [keyLetter]);
 
   // console.log("les plats coorespondant à la lettre sont ", byLetterMeal.meals)
 
@@ -66,7 +65,7 @@ if (!keyLetter) {
 
   if (!byLetterMeal.meals) {
 
-    result = "- Aucun résultat -";
+    result = "- AUCUN RESULTAT -";
 
   } else {
 

@@ -26,7 +26,7 @@ function SearchResults() {
         };
 
         fetchSearchResults();
-    }, []);
+    }, [params.searchId]);
 
 
     // console.log("les résultats de recherche ", searchResults.meals)
@@ -43,7 +43,7 @@ function SearchResults() {
                 <div className="cardHolder">
 
                     {!searchResults.meals ? (
-                        <div>rien</div>
+                        <div>- AUCUN RESULTAT -</div>
                     ) : (
                         searchResults.meals.map((items,i) => {
                             return <div key={i}>{<MealThumb meal={items} />}</div>;

@@ -15,7 +15,7 @@ function SearchEngine() {
 
 
         setInputText("");
-        //window.location.reload(false);
+     //   window.location.reload(false);
 
     }
 
@@ -50,7 +50,6 @@ function SearchEngine() {
 
                 <Link to={`/searchResults/${searchId}`}>
 
-
                     <div className="searchBtt">
 
 
@@ -61,7 +60,6 @@ function SearchEngine() {
 
 
                     </div>
-
 
                 </Link>
 

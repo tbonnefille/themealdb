@@ -27,12 +27,10 @@ function Ingredient() {
       return word[0].toUpperCase() + word.substring(1);
     }).join(" ");
 
-
   //console.log("le résultat est :", res)
 
 
   const [ingredient, setIngredient] = useState([])
-
 
   useEffect(() => {
     const fetchIngredient = async () => {
@@ -44,12 +42,10 @@ function Ingredient() {
     };
 
     fetchIngredient();
-  }, []);
-
+  }, [res]);
 
 
   const [ingredientList, setIngredientList] = useState([])
-
 
   useEffect(() => {
     const fetchIngredientList = async () => {
@@ -63,7 +59,6 @@ function Ingredient() {
     fetchIngredientList();
   }, []);
 
-
   // console.log("la liste des ingrédients ", ingredientList.meals)
 
 
@@ -71,8 +66,7 @@ function Ingredient() {
 
   const myCurrentIngredient = `${res}`;
 
-  let myDescription ="";
-
+  let myDescription = "";
 
 
   if (!myArr || myArr.length === 0) {
@@ -85,7 +79,7 @@ function Ingredient() {
 
   else {
 
-   
+
     const myfilteredList = ingredientList.meals.filter((el) => {
       return el.strIngredient === myCurrentIngredient;
     });
@@ -99,9 +93,7 @@ function Ingredient() {
     // console.log("myDescription", myDescription);
 
 
-
   }
-
 
 
   let descriptionTxt = "";
@@ -129,9 +121,7 @@ function Ingredient() {
 
           <div className="bigMeal">
 
-
             <img src={`https://www.themealdb.com/images/ingredients/${params.ingredientId}.png`} className="bigImg" alt={params.ingredientId} />
-
 
           </div>
 
@@ -143,13 +133,12 @@ function Ingredient() {
 
           <div>{descriptionTxt}</div>
 
-
         </section>
 
 
       </div>
 
-      <section className="cardDisplay">
+      <div className="cardDisplay">
 
         <h2>Plats contenant l'ingrédient "{res}"</h2>
 
@@ -166,11 +155,7 @@ function Ingredient() {
         </div>
 
 
-
-
-
-
-      </section>
+      </div>
 
     </div>
   );

@@ -12,7 +12,6 @@ function Category() {
 
   const params = useParams();
 
-
   //console.log("params = ", params.catId)
 
   const [category, setCategory] = useState([])
@@ -28,8 +27,7 @@ function Category() {
     };
 
     fetchCategory();
-  }, []);
-
+  }, [params.catId]);
 
   //console.log("les plats coorespondant à la categorie ", category)
 
@@ -37,12 +35,9 @@ function Category() {
   return (
     <div className="Category">
 
-
       <section className="cardDisplay">
 
-
         <h1>Plats dans la catégorie "{params.catId}"</h1>
-
 
         <div className="cardHolder">
 

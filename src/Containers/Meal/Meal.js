@@ -24,7 +24,7 @@ function Meal() {
     };
 
     fetchMeal();
-  }, []);
+  }, [params.idMeal]);
 
   //console.log("le plat est ", meal.meals)
 
@@ -54,7 +54,6 @@ function Meal() {
           }
 
           //  console.log("les ingredients sont:", ingredientsArr)
-
 
           const qteMesures = [];
 

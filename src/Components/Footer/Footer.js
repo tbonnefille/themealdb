@@ -3,7 +3,9 @@ import "./footer.css";
 import css3 from '../../Assets/css3.png';
 import html5 from '../../Assets/html5.png';
 import javascript from '../../Assets/javascript.png';
-import react from '../../Assets/react.png';
+import react from '../../Assets/react.png'
+
+import Modal from "../Modal/Modal";
 
 import { Link } from "react-router-dom";
 
@@ -18,7 +20,8 @@ function Footer() {
 
         <div className="aboutTitle">About</div>
 
-        <div>une modale expliquant le projet</div>
+        <Modal />
+        
        <Link to="https://www.themealdb.com/api.php"><div className="projectLinks"> - A.P.I. originale themealdb - </div></Link>
 
       </div>
