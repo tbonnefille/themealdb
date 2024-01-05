@@ -3,7 +3,7 @@ import "./header.css";
 import { Link } from "react-router-dom";
 
 import SearchEngine from "../SearchEngine/SearchEngine";
-
+import Lightswitch from "../Lightswitch/Lightswitch";
 
 function Header() {
 
@@ -26,7 +26,9 @@ function Header() {
 
                 <Link to="/"><div className="homeBtt">Home</div></Link>
 
-                <div>bouton mode nuit</div>
+               
+
+                <Lightswitch />
 
             </div>
 

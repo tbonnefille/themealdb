@@ -1,8 +1,22 @@
-.SearchResults {
+.SearchResults-light {
 
-
-    margin-left: 200px;
-    margin-right: 200px;
+    padding-left: 200px;
+    padding-right: 200px;
     min-height: 450px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.SearchResults-dark {
+
+    padding-left: 200px;
+    padding-right: 200px;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    color: aliceblue;
 
 }

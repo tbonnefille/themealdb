@@ -1,7 +1,8 @@
 import "./searchResults.css";
 
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { DarkModeContext } from "../../Context/DarkModeContext";
 
 import MealThumb from "../../Components/MealThumb/MealThumb";
 
@@ -11,7 +12,9 @@ function SearchResults() {
 
     const params = useParams();
 
-   // console.log("params = ", params.searchId)
+    // console.log("params = ", params.searchId)
+
+    const { darkMode } = useContext(DarkModeContext);
 
     const [searchResults, setSearchResults] = useState([])
 
@@ -33,19 +36,20 @@ function SearchResults() {
 
 
     return (
-        <div className="SearchResults">
+
+        <div className={darkMode ? `SearchResults-dark` : `SearchResults-light`}>
 
 
             <section className="cardDisplay" >
 
                 <h1>Résultats de recherche pour le terme "{params.searchId}"</h1>
 
-                <div className="cardHolder">
+                <div className={darkMode ? `cardHolder-dark` : `cardHolder-light`}>
 
                     {!searchResults.meals ? (
                         <div>- AUCUN RESULTAT -</div>
                     ) : (
-                        searchResults.meals.map((items,i) => {
+                        searchResults.meals.map((items, i) => {
                             return <div key={i}>{<MealThumb meal={items} />}</div>;
                         })
                     )}

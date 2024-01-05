@@ -1,11 +1,13 @@
 import "./categoryThumb.css";
 
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DarkModeContext } from "../../Context/DarkModeContext";
 
 
 function CategoryThumb(props) {
 
-
+    const { darkMode } = useContext(DarkModeContext);
 
     const catId = props.category.strCategory;
 
@@ -16,25 +18,16 @@ function CategoryThumb(props) {
         <Link to={`/category/${catId}`}>
 
 
+            <div className={darkMode ? `MealThumb-dark` : `MealThumb-light`}>
 
+                <img src={props.category.strCategoryThumb} className="cardImg" alt="" />
 
-        <div className="MealThumb">
+                <div className="cardTxtCat">{props.category.strCategory}</div>
 
-            <img src={props.category.strCategoryThumb} className="cardImg" alt="" />
-
-            <div className="cardTxtCat">{props.category.strCategory}</div>
-
-        </div>
-
-
-
-
+            </div>
 
 
         </Link>
-
-
-
 
 
     );

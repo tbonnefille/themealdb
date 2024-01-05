@@ -1,0 +1,22 @@
+.lightswitch {
+
+    width: 80px;
+    border: 2px solid aliceblue;
+    background-color: #1d7874;
+    border-radius: 25px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.dmIcon {
+
+
+    height: 30px;
+    object-fit: cover;
+
+}

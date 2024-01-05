@@ -1,27 +1,31 @@
 
-.ByLetter {
+.ByLetter-light {
 
 
-    margin-left: 200px;
-    margin-right: 200px;
+    padding-left: 200px;
+    padding-right: 200px;
     text-align: center;
     min-height: 450px;
-}
-
-
-
-
-
-
-
-
-
-
-
-.cardHolder {
-
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+    flex-direction: column;
 }
+
+
+.ByLetter-dark {
+
+
+    padding-left: 200px;
+    padding-right: 200px;
+    text-align: center;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    color: rgba(255, 255, 255, .87);
+}
+
+
+
+
+
+

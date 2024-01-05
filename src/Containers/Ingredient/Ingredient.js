@@ -1,7 +1,8 @@
 import "./ingredient.css";
 
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { DarkModeContext } from "../../Context/DarkModeContext";
 
 import MealThumb from "../../Components/MealThumb/MealThumb";
 
@@ -12,6 +13,8 @@ function Ingredient() {
   const params = useParams();
 
   //console.log("params = ", params.ingredientId)
+
+  const { darkMode } = useContext(DarkModeContext);
 
   /*
   Ici, on fait en sorte que les noms de l'ingrédient commencent TOUJOURS par une majuscule,
@@ -111,7 +114,7 @@ function Ingredient() {
 
   return (
 
-    <div className="Meal">
+    <div className={darkMode ? `Meal-dark` : `Meal-light`}>
 
       <h1>{res}</h1>
 
@@ -121,7 +124,7 @@ function Ingredient() {
 
           <div className="bigMeal">
 
-            <img src={`https://www.themealdb.com/images/ingredients/${params.ingredientId}.png`} className="bigImg" alt={params.ingredientId} />
+            <img src={`https://www.themealdb.com/images/ingredients/${params.ingredientId}.png`} className={darkMode ? `bigImg-dark` : `bigImg-light`} alt={params.ingredientId} />
 
           </div>
 
@@ -142,7 +145,7 @@ function Ingredient() {
 
         <h2>Plats contenant l'ingrédient "{res}"</h2>
 
-        <div className="cardHolder">
+        <div className={darkMode ? `cardHolder-dark` : `cardHolder-light`}>
 
           {!ingredient.meals ? (
             <div>rien</div>

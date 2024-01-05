@@ -37,21 +37,25 @@ slice des résultats et pagination? -> creer un state de la page courante(slice 
 .App {
 
   font-family: 'Cabin', Helvetica, Arial, sans-serif;
+
+
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 
 
   font-family: 'Lobster', Georgia, Times, serif;
 
-    text-decoration: underline;
-    text-align: center;
+  text-decoration: underline;
+  text-align: center;
 }
 
 h1 {
 
   font-size: 3.5rem;
- 
+
 }
 
 h2 {
@@ -69,4 +73,32 @@ a {
 .cardDisplay {
 
   margin-bottom: 50px;
+}
+
+
+
+
+
+.cardHolder-light {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 25px;
+
+
+}
+
+
+.cardHolder-dark {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, .09);
+
 }

@@ -1,8 +1,8 @@
 import "./byLetter.css";
 
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { DarkModeContext } from "../../Context/DarkModeContext";
 
 import MealThumb from "../../Components/MealThumb/MealThumb";
 
@@ -13,6 +13,8 @@ function ByLetter() {
   const params = useParams();
 
   //console.log("params = ", params.letter)
+
+  const { darkMode } = useContext(DarkModeContext);
 
 
   //si l'url contient plusieures lettres(input direct)
@@ -76,13 +78,14 @@ function ByLetter() {
 
 
   return (
-    <div className="ByLetter">
+
+    <div className={darkMode ? `ByLetter-dark` : `ByLetter-light`}>
 
       <h1>Plats commençants par la lettre "{keyLetter}"</h1>
 
       <section className="cardDisplay">
 
-        <div className="cardHolder">{result}</div>
+      <div className={darkMode ? `cardHolder-dark` : `cardHolder-light`}>{result}</div>
 
       </section>
 

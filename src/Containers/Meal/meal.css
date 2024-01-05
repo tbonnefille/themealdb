@@ -1,13 +1,24 @@
-.Meal {
+.Meal-light {
 
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 50px;
-
+    padding-left: 200px;
+    padding-right: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+}
+
+.Meal-dark {
+
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    color: aliceblue;
 
 }
 
@@ -30,6 +41,7 @@
     padding-right: 50px;
     text-align: center;
     font-size: 1.25rem;
+
 }
 
 .bigMeal {
@@ -42,7 +54,7 @@
 }
 
 
-.bigImg {
+.bigImg-light {
 
     object-fit: cover;
     height: 450px;
@@ -52,9 +64,21 @@
     padding: 10px;
     box-shadow: 0px 5px 15px -3px rgba(0, 0, 0, 0.6);
 
+
 }
 
+.bigImg-dark {
 
+    object-fit: cover;
+    height: 450px;
+    width: 450px;
+    border-radius: 5%;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 5px 15px -3px rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, .16);
+
+}
 
 .mealTxt {
 
@@ -65,22 +89,30 @@
 
 .mealInfoTxt {
 
-    margin: 10px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
 
+.mealInfoSlab-light {
 
-.mealInfoSlab {
+    display: flex;
+    align-items: center;
+}
 
-    margin: 15px;
+.mealInfoSlab-dark {
+
+    display: flex;
+    align-items: center;
+    color: aliceblue;
 }
 
 .areaBtt {
 
     background-color: #bb0b0b;
-    margin: 10px;
+    margin-left: 10px;
     padding: 7px;
     border: 2px solid aliceblue;
     display: flex;
@@ -95,9 +127,8 @@
 
 .catBtt {
 
-
     background-color: #883677;
-    margin: 10px;
+    margin-left: 10px;
     padding: 5px;
     border: 2px solid aliceblue;
     display: flex;
@@ -113,7 +144,7 @@
 .skoBtt {
 
     background-color: #1d7874;
-    margin: 10px;
+
     padding: 5px;
     border: 2px solid aliceblue;
     display: flex;
@@ -128,14 +159,12 @@
 
 .skoBtt:hover {
 
-
     background-color: #bb0b0b;
 
 }
 
 
 .mealInstructions {
-
 
     margin: 10px;
     padding: 10px;

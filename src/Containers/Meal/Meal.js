@@ -1,7 +1,8 @@
 import "./meal.css";
 
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { DarkModeContext } from "../../Context/DarkModeContext";
 import { Link } from "react-router-dom";
 
 
@@ -11,6 +12,8 @@ function Meal() {
   const params = useParams();
 
   //console.log("params = ", params.idMeal)
+
+  const { darkMode } = useContext(DarkModeContext);
 
   const [meal, setMeal] = useState([])
 
@@ -33,7 +36,7 @@ function Meal() {
 
   return (
 
-    <div className="Meal">
+    <div className={darkMode ? `Meal-dark` : `Meal-light`}>
 
 
       {!repas ? (
@@ -81,13 +84,13 @@ function Meal() {
 
                   <h2>Informations</h2>
 
-                  <Link to={`/area/${items.strArea}`}><div className="mealInfoSlab">style : <div className="areaBtt">{items.strArea}</div></div></Link>
+                  <Link to={`/area/${items.strArea}`}><div className={darkMode ? `mealInfoSlab-dark` : `mealInfoSlab-light`}> style : <div className="areaBtt">{items.strArea}</div></div></Link>
 
-                  <Link to={`/category/${items.strCategory}`}> <div className="mealInfoSlab"> catégorie : <div className="catBtt">{items.strCategory}</div></div></Link>
+                  <Link to={`/category/${items.strCategory}`}><div className={darkMode ? `mealInfoSlab-dark` : `mealInfoSlab-light`}> catégorie : <div className="catBtt">{items.strCategory}</div></div></Link>
 
-                  <Link to={`${items.strYoutube}`}><div className="mealInfoSlab"><div className="skoBtt">lien youtube</div></div></Link>
+                  <Link to={`${items.strYoutube}`}><div className={darkMode ? `mealInfoSlab-dark` : `mealInfoSlab-light`}><div className="skoBtt">lien youtube</div></div></Link>
 
-                  <Link to={`${items.strSource}`}><div className="mealInfoSlab"><div className="skoBtt">source</div></div></Link>
+                  <Link to={`${items.strSource}`}><div className={darkMode ? `mealInfoSlab-dark` : `mealInfoSlab-light`}><div className="skoBtt">source</div></div></Link>
 
                   <div> Tags :  {items.strTags} </div>
 
@@ -97,7 +100,7 @@ function Meal() {
 
                 <section className="bigMeal">
 
-                  <img src={items.strMealThumb} className="bigImg" alt={items.strMeal} />
+                  <img src={items.strMealThumb} className={darkMode ? `bigImg-dark` : `bigImg-light`} alt={items.strMeal} />
 
                 </section>
 
@@ -148,7 +151,7 @@ function Meal() {
 
               <h2>Ingrédients</h2>
 
-              <div className="cardHolder">
+              <div className={darkMode ? `cardHolder-dark` : `cardHolder-light`}>
 
 
                 {ingredientsArr.length === 0 ? (
@@ -157,7 +160,7 @@ function Meal() {
                   ingredientsArr.map((ing, i) => {
                     return <div key={i}><Link to={`/ingredient/${ing}`}>
 
-                      <div className="MealThumb">
+                      <div className={darkMode ? `MealThumb-dark` : `MealThumb-light`}>
                         <img src={`https://www.themealdb.com/images/ingredients/${ing}.png`} className="cardImg" alt={ing} />
                         <div>{ing}</div>
                       </div>

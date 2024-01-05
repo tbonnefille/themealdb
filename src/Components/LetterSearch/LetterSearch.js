@@ -1,18 +1,21 @@
 import "./letterSearch.css";
 
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DarkModeContext } from "../../Context/DarkModeContext";
 
 
 function LetterSearch() {
 
-    
+    const { darkMode } = useContext(DarkModeContext);
+
     return (
 
         <div className="LetterSearch">
 
                 <h2>choix par lettre</h2>
 
-                <div className="alpha">
+                <div className={darkMode ? `alpha-dark` : `alpha-light`}>
 
                     <Link to="/ByLetter/a"><div className="letter">A</div></Link>
                     <Link to="/ByLetter/b"><div className="letter">B</div></Link>

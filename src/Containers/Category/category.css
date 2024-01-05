@@ -1,5 +1,21 @@
-.Category {
+.Category-light {
 
-    margin-left: 200px;
-    margin-right: 200px;
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Category-dark {
+
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    color: rgba(255, 255, 255, .87);
 }

@@ -1,7 +1,8 @@
 import "./category.css";
 
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { DarkModeContext } from "../../Context/DarkModeContext";
 
 import MealThumb from "../../Components/MealThumb/MealThumb";
 
@@ -13,6 +14,8 @@ function Category() {
   const params = useParams();
 
   //console.log("params = ", params.catId)
+
+  const { darkMode } = useContext(DarkModeContext);
 
   const [category, setCategory] = useState([])
 
@@ -33,13 +36,14 @@ function Category() {
 
 
   return (
-    <div className="Category">
+
+    <div className={darkMode ? `Category-dark` : `Category-light`}>
 
       <section className="cardDisplay">
 
         <h1>Plats dans la catégorie "{params.catId}"</h1>
 
-        <div className="cardHolder">
+        <div className={darkMode ? `cardHolder-dark` : `cardHolder-light`}>
 
           {category.length === 0 ? (
             <div>rien</div>

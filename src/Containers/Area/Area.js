@@ -1,12 +1,15 @@
 import "./area.css";
 
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { DarkModeContext } from "../../Context/DarkModeContext";
 
 import MealThumb from "../../Components/MealThumb/MealThumb";
 
 
 function Area() {
+
+  const { darkMode } = useContext(DarkModeContext);
 
   const params = useParams();
 
@@ -30,7 +33,8 @@ function Area() {
 
 
   return (
-    <div className="Area">
+
+    <div className={darkMode ? `Area-dark` : `Area-light`}>
 
 
       <section className="cardDisplay">
@@ -39,7 +43,7 @@ function Area() {
         <h1>Plats dans le style "{params.countryId}"</h1>
 
 
-        <div className="cardHolder">
+        <div className={darkMode ? `cardHolder-dark` : `cardHolder-light`}>
 
           {!area.meals ? (
             <div>rien</div>

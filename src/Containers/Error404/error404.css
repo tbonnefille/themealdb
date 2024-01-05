@@ -1,4 +1,4 @@
-.Error404 {
+.Error404-light {
 
     height: 100vh;
     display: flex;
@@ -8,7 +8,15 @@
     color: #bb0b0b;
 }
 
+.Error404-dark {
 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    align-items: center;
+    color: #bb0b0b;
+}
 
 .errorNb {
 
@@ -19,4 +27,15 @@
 .errorTxt {
 
     font-size: 3rem;
+}
+
+.errorMessage-light {
+
+    font-size: 1.5rem;
+}
+
+.errorMessage-dark {
+
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, .87);
 }
