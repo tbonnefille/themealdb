@@ -16,28 +16,22 @@ Lobster & Cabin
 
 /*Questions en suspend
 
-regEx sur url by letter?
-
-
 la page ingredient s'ouvre au milieu, pas en haut
 
-2. comment faire pour valider l'input avec enter?
 
 
-kisusu est buggé
 
+
+regEx sur url by letter?
 
 slice des résultats et pagination? -> creer un state de la page courante(slice differement ex de 1 à 10, puis 11 à 20
 
-
-
-
 */
+
 
 .App {
 
   font-family: 'Cabin', Helvetica, Arial, sans-serif;
-
 
 }
 
@@ -45,9 +39,7 @@ h1,
 h2,
 h3 {
 
-
   font-family: 'Lobster', Georgia, Times, serif;
-
   text-decoration: underline;
   text-align: center;
 }
@@ -76,9 +68,6 @@ a {
 }
 
 
-
-
-
 .cardHolder-light {
 
   display: flex;
@@ -86,7 +75,6 @@ a {
   justify-content: space-around;
   padding: 20px;
   border-radius: 25px;
-
 
 }
 
@@ -98,7 +86,6 @@ a {
   justify-content: space-around;
   padding: 20px;
   border-radius: 25px;
-
   background: rgba(255, 255, 255, .09);
 
 }

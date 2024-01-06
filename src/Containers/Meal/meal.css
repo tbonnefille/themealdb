@@ -18,7 +18,7 @@
     justify-content: center;
     align-items: center;
     background-color: #121212;
-    color: aliceblue;
+    color: rgba(255, 255, 255, .87);
 
 }
 
@@ -100,12 +100,14 @@
 
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .mealInfoSlab-dark {
 
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
     color: aliceblue;
 }
 

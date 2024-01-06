@@ -1,7 +1,7 @@
 import "./searchEngine.css";
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import loupe from '../../Assets/loupe.png';
 
@@ -9,26 +9,29 @@ import loupe from '../../Assets/loupe.png';
 function SearchEngine() {
 
 
-
-
     function refreshPage() {
 
-
         setInputText("");
-     //   window.location.reload(false);
 
     }
 
-
-
     const [inputText, setInputText] = useState("");
-
 
     const searchId = `${inputText}`;
 
+    const navigate = useNavigate();
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+
+            navigate(`/SearchResults/${searchId}`);
+            setInputText("");
+
+        }
+    };
+
 
     return (
-
 
 
         <div className="SearchEngine">
@@ -40,24 +43,23 @@ function SearchEngine() {
                 <input
                     type="text"
                     id="search"
-                    placeholder="rechercher un plat"
+                    placeholder="rechercher un plat ou un mot-clé"
                     value={inputText}
                     onChange={(event) => {
                         setInputText(event.target.value);
-                    }}
-                ></input>
 
+                    }}
+                    onKeyDown={handleKeyDown}
+
+                ></input>
 
                 <Link to={`/searchResults/${searchId}`}>
 
                     <div className="searchBtt">
 
-
                         <div onClick={refreshPage}>
-                             <div><img src={loupe} alt="icone loupe" className="searchIcon" title="rechercher" /></div>
-                             </div>
-
-
+                            <div><img src={loupe} alt="icone loupe" className="searchIcon" title="rechercher" /></div>
+                        </div>
 
                     </div>
 
@@ -66,8 +68,6 @@ function SearchEngine() {
             </div>
 
         </div>
-
-
 
 
     );
