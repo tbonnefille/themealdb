@@ -8,9 +8,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .1s ease-in-out;
 }
 
+.lightswitch:hover {
 
+    transform: scale(1.075);
+
+}
 
 
 .dmIcon {
@@ -19,3 +24,4 @@
     object-fit: cover;
 
 }
+

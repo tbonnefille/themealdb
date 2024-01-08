@@ -24,13 +24,20 @@ function Ingredient() {
   const mySentence = `${params.ingredientId}`;
   const words = mySentence.split(" ");
 
-  const res =
+  let res =
 
     words.map((word) => {
       return word[0].toUpperCase() + word.substring(1);
     }).join(" ");
 
-  //console.log("le résultat est :", res)
+  console.log("le résultat est :", res)
+
+  //attention: pour "Apple & Blackberry Crumble", la db est mal renseignée
+
+  if (res === "Blackberrys") {
+
+    res = "Blackberries";
+  }
 
 
   const [ingredient, setIngredient] = useState([])
@@ -88,7 +95,7 @@ function Ingredient() {
     });
 
 
-    // console.log("myfilteredList",myfilteredList)
+    //console.log("myfilteredList",myfilteredList)
 
 
     // bien vérifier que la longueur du tableau est non nulle

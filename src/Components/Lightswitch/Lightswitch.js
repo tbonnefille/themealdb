@@ -17,42 +17,22 @@ function Lightswitch() {
 
     }
 
-    /*
-    
-                <img src={darkMode ?
-    
-                    `${ moon }` : `${ sun }`  }  alt="lightswitch"
-    
-                     />
-    
-    
-    
-    */
-
+   
     return (
 
         <div className="lightswitch"
-        
-        onClick={handleClick}
-        
+
+            onClick={handleClick}
+
         >
-
-
-
 
             {darkMode ? <img src={sun} alt="soleil" className="dmIcon" /> : <img src={moon} alt="lune" className="dmIcon" />}
 
-
-
-
-
-
         </div>
-
 
 
     )
 
 }
 
-export default Lightswitch
+export default Lightswitch;

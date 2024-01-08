@@ -71,7 +71,6 @@ function Meal() {
           //  console.log("les qte & mesures sont :", qteMesures)
 
 
-
           return <div key={i}>
 
             <h1>{items.strMeal}</h1>
@@ -95,7 +94,6 @@ function Meal() {
                   <div> Tags :  {items.strTags} </div>
 
                 </section>
-
 
 
                 <section className="bigMeal">
@@ -134,20 +132,16 @@ function Meal() {
 
                     </div>
 
-
                   </div>
-
 
                 </section>
 
               </div>
 
-
             </div>
 
 
             <section className="cardDisplay">
-
 
               <h2>Ingrédients</h2>
 
@@ -158,14 +152,15 @@ function Meal() {
                   <div>rien</div>
                 ) : (
                   ingredientsArr.map((ing, i) => {
-                    return <div key={i}><Link to={`/ingredient/${ing}`}>
+                    return (
+                      <Link key={i} to={`/ingredient/${ing}`}>
 
-                      <div className={darkMode ? `MealThumb-dark` : `MealThumb-light`}>
-                        <img src={`https://www.themealdb.com/images/ingredients/${ing}.png`} className="cardImg" alt={ing} />
-                        <div>{ing}</div>
-                      </div>
+                        <div className={darkMode ? `MealThumb-dark` : `MealThumb-light`}>
+                          <img src={`https://www.themealdb.com/images/ingredients/${ing}.png`} className="cardImg" alt={ing} />
+                          <div>{ing}</div>
+                        </div>
 
-                    </Link></div>
+                      </Link>)
 
 
                   })
@@ -173,7 +168,6 @@ function Meal() {
 
 
               </div>
-
 
             </section>
 
@@ -185,10 +179,7 @@ function Meal() {
       )}
 
 
-
     </div>
-
-
 
   );
 
