@@ -33,3 +33,9 @@
     text-align: center;
     width: 70%;
 }
+
+ul {
+
+    text-align: start;
+    margin-left: 50px;
+}

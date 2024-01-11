@@ -16,6 +16,8 @@ import Footer from "./Components/Footer/Footer";
 
 import { DarkModeProvider } from './Context/DarkModeContext';
 
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+
 
 function App() {
 
@@ -23,8 +25,9 @@ function App() {
 
     <BrowserRouter>
 
-      <div className="App">
+<ScrollToTop />
 
+      <div className="App">
 
         <DarkModeProvider>
 

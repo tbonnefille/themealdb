@@ -25,7 +25,14 @@ function Modal() {
 
                     <div className="modalTxt">
 
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate </p>
+                        <p>Ce projet m'a permit de mettre en oeuvre les compétences suivantes:</p>
+                        <ul>
+                            <li>réaliser une application REACT avec plusieurs appels d'A.P.I.</li>
+                            <li>créer une architecture logique et fonctionnelle</li>
+                            <li>réaliser un "dark mode" grâce à useContext</li>
+                            <li>appliquer quelques notions de Material Design (proposé par Google)</li>
+                            <li>débogger les problèmes dûs à une base de données mal renseignée</li>                          
+                        </ul>
 
                     </div>
 
